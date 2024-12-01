@@ -12,6 +12,6 @@ public static class PartOne
             result += Math.Max(left[i], right[i]) - Math.Min(left[i], right[i]);
         }
 
-        Console.WriteLine(result);
+        Console.WriteLine($"Day 1, Part 1 : {result}");
     }
 }

@@ -6,9 +6,9 @@ internal static partial class Puzzle
 {
     private const string Input = "";
 
-    internal static (int[], int[]) Parse()
+    internal static (int[], int[]) Parse(bool partOne = true)
     {
-        string[] numberPairs = Puzzle.Input.Split(Environment.NewLine);
+        string[] numberPairs = Input.Split(Environment.NewLine);
 
         int[] left = new int[numberPairs.Length];
         int[] right = new int[numberPairs.Length];
@@ -21,8 +21,11 @@ internal static partial class Puzzle
             right[i] = int.Parse(numberPair[1]);
         }
 
-        Array.Sort(left);
-        Array.Sort(right);
+        if (partOne)
+        {
+            Array.Sort(left);
+            Array.Sort(right);
+        }
 
         return (left, right);
     }
