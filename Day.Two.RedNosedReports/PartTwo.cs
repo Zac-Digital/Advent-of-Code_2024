@@ -1,7 +1,11 @@
+using Shared.Code;
+
 namespace Day.Two.RedNosedReports;
 
-public static class PartTwo
+public class PartTwo : Compute
 {
+    public PartTwo() : base("Day 2, Part 2") { }
+
     private static bool IsIncreasing(List<int> report) => report.SequenceEqual(report.Order());
     private static bool IsDecreasing(List<int> report) => report.SequenceEqual(report.OrderDescending());
 
@@ -17,16 +21,15 @@ public static class PartTwo
         return true;
     }
 
-    public static void Run()
+    protected override int Run()
     {
         // Sorry.. Felt like doing something horribly cursed :)
-        Console.WriteLine(
-            $"Day 2, Part 2 : {Puzzle.Parse()
-                .Count(report =>
-                    report.Where((_, i) =>
-                    {
-                        List<int> reportWithSkippedIndex = report.Where((_, j) => i != j).ToList();
-                        return IsOrdered(reportWithSkippedIndex) && IsInRange(reportWithSkippedIndex);
-                    }).Any())}");
+        return Puzzle.Parse()
+            .Count(report =>
+                report.Where((_, i) =>
+                {
+                    List<int> reportWithSkippedIndex = report.Where((_, j) => i != j).ToList();
+                    return IsOrdered(reportWithSkippedIndex) && IsInRange(reportWithSkippedIndex);
+                }).Any());
     }
 }

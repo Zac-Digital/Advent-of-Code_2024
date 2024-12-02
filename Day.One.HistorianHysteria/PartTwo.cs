@@ -1,8 +1,12 @@
+using Shared.Code;
+
 namespace Day.One.HistorianHysteria;
 
-public static class PartTwo
+public class PartTwo : Compute
 {
-    public static void Run()
+    public PartTwo() : base("Day 1, Part 2") { }
+
+    protected override int Run()
     {
         int result = 0;
         (int[] left, int[] right) = Puzzle.Parse(false);
@@ -12,6 +16,6 @@ public static class PartTwo
             result += leftNumber * right.Count(rightNumber => rightNumber == leftNumber);
         }
 
-        Console.WriteLine($"Day 1, Part 2 : {result}");
+        return result;
     }
 }

@@ -1,8 +1,12 @@
+using Shared.Code;
+
 namespace Day.One.HistorianHysteria;
 
-public static class PartOne
+public class PartOne : Compute
 {
-    public static void Run()
+    public PartOne() : base("Day 1, Part 1") { }
+
+    protected override int Run()
     {
         int result = 0;
         (int[] left, int[] right) = Puzzle.Parse();
@@ -12,6 +16,6 @@ public static class PartOne
             result += Math.Max(left[i], right[i]) - Math.Min(left[i], right[i]);
         }
 
-        Console.WriteLine($"Day 1, Part 1 : {result}");
+        return result;
     }
 }
