@@ -1,4 +1,4 @@
-namespace Day._1.HistorianHysteria;
+namespace Day.One.HistorianHysteria;
 
 public static class PartTwo
 {

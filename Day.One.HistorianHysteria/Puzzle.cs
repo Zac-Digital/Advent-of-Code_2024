@@ -1,6 +1,6 @@
 using System.Text.RegularExpressions;
 
-namespace Day._1.HistorianHysteria;
+namespace Day.One.HistorianHysteria;
 
 internal static partial class Puzzle
 {

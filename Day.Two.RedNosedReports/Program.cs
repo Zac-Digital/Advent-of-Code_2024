@@ -1,4 +1,4 @@
-﻿namespace Day.One.HistorianHysteria;
+﻿namespace Day.Two.RedNosedReports;
 
 internal static class Program
 {
