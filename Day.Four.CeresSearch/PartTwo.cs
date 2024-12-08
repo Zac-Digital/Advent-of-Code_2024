@@ -8,6 +8,28 @@ public class PartTwo : Compute
 
     protected override int Run()
     {
-        return 0;
+        int result = 0;
+
+        string[] board = Puzzle.Parse();
+
+        for (int row = 1; row < board.Length - 1; row++)
+        {
+            for (int column = 1; column < board[0].Length - 1; column++)
+            {
+                if (board[row][column] != 'A') continue;
+
+                bool northWestToSouthEast = board[row - 1][column - 1] == 'M' && board[row + 1][column + 1] == 'S';
+                bool northEastToSouthWest = board[row - 1][column + 1] == 'M' && board[row + 1][column - 1] == 'S';
+                bool southWestToNorthEast = board[row + 1][column - 1] == 'M' && board[row - 1][column + 1] == 'S';
+                bool southEastToNorthWest = board[row + 1][column + 1] == 'M' && board[row - 1][column - 1] == 'S';
+
+                if ((northWestToSouthEast || southEastToNorthWest) && (northEastToSouthWest || southWestToNorthEast))
+                {
+                    result++;
+                }
+            }
+        }
+
+        return result;
     }
 }

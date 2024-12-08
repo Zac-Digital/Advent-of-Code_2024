@@ -1,8 +1,6 @@
-using System.Text.RegularExpressions;
-
 namespace Day.Four.CeresSearch;
 
-internal static partial class Puzzle
+internal static class Puzzle
 {
     private const string Input = "";
 
