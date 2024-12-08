@@ -14,7 +14,7 @@
 
     <ItemGroup>
       <None Update="Puzzle.TXT">
-        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+        <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
     </ItemGroup>
 

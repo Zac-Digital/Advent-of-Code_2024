@@ -8,13 +8,13 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\Shared.Code\Shared.Code.csproj" />
-    </ItemGroup>
-
-    <ItemGroup>
       <None Update="Puzzle.TXT">
         <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <ProjectReference Include="..\Shared.Code\Shared.Code.csproj" />
     </ItemGroup>
 
 </Project>
