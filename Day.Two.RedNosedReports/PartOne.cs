@@ -23,6 +23,6 @@ public class PartOne : Compute
 
     protected override int Run()
     {
-        return Puzzle.Parse().Where(IsOrdered).Count(IsInRange);
+        return new Puzzle().Parse().Where(IsOrdered).Count(IsInRange);
     }
 }

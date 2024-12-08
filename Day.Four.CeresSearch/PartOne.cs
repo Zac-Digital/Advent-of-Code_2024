@@ -78,7 +78,7 @@ public class PartOne : Compute
     {
         int result = 0;
 
-        string[] board = Puzzle.Parse();
+        string[] board = new Puzzle().Parse();
 
         for (int row = 0; row < board.Length; row++)
         {

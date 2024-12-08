@@ -10,7 +10,7 @@ public class PartTwo : Compute
     {
         int result = 0;
 
-        string[] board = Puzzle.Parse();
+        string[] board = new Puzzle().Parse();
 
         for (int row = 1; row < board.Length - 1; row++)
         {

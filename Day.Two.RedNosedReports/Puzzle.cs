@@ -1,9 +1,9 @@
+using Shared.Code;
+
 namespace Day.Two.RedNosedReports;
 
-internal static class Puzzle
+internal class Puzzle : Puzzle<List<List<int>>>
 {
-    private const string Input = "";
-
-    internal static List<List<int>> Parse() => Input.Split(Environment.NewLine)
+    public override List<List<int>> Parse() => Input.Split(Environment.NewLine)
         .Select(report => report.Split(" ").Select(int.Parse).ToList()).ToList();
 }

@@ -11,4 +11,10 @@
       <ProjectReference Include="..\Shared.Code\Shared.Code.csproj" />
     </ItemGroup>
 
+    <ItemGroup>
+      <None Update="Puzzle.TXT">
+        <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+      </None>
+    </ItemGroup>
+
 </Project>

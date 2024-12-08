@@ -1,12 +1,11 @@
 using System.Text.RegularExpressions;
+using Shared.Code;
 
 namespace Day.One.HistorianHysteria;
 
-internal static partial class Puzzle
+internal partial class Puzzle : Puzzle<(int[], int[])>
 {
-    private const string Input = "";
-
-    internal static (int[], int[]) Parse(bool partOne = true)
+    public override (int[], int[]) Parse()
     {
         string[] numberPairs = Input.Split(Environment.NewLine);
 
@@ -21,11 +20,8 @@ internal static partial class Puzzle
             right[i] = int.Parse(numberPair[1]);
         }
 
-        if (partOne)
-        {
-            Array.Sort(left);
-            Array.Sort(right);
-        }
+        Array.Sort(left);
+        Array.Sort(right);
 
         return (left, right);
     }

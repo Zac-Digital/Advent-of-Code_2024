@@ -24,7 +24,7 @@ public class PartTwo : Compute
     protected override int Run()
     {
         // Sorry.. Felt like doing something horribly cursed :)
-        return Puzzle.Parse()
+        return new Puzzle().Parse()
             .Count(report =>
                 report.Where((_, i) =>
                 {

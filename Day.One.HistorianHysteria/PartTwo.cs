@@ -9,7 +9,7 @@ public class PartTwo : Compute
     protected override int Run()
     {
         int result = 0;
-        (int[] left, int[] right) = Puzzle.Parse(false);
+        (int[] left, int[] right) = new Puzzle().Parse();
 
         foreach (int leftNumber in left)
         {

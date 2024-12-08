@@ -8,9 +8,9 @@ internal static class Program
 
     private static void Main()
     {
-        foreach (Compute Task in Code)
+        foreach (Compute task in Code)
         {
-            Task.Time();
+            task.Time();
         }
     }
 }

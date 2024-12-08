@@ -1,8 +1,8 @@
+using Shared.Code;
+
 namespace Day.Four.CeresSearch;
 
-internal static class Puzzle
+internal class Puzzle : Puzzle<string[]>
 {
-    private const string Input = "";
-
-    internal static string[] Parse() => Input.Split(Environment.NewLine);
+    public override string[] Parse() => Input.Split(Environment.NewLine);
 }

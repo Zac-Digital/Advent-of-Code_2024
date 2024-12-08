@@ -12,7 +12,7 @@ public class PartTwo : Compute
 
         bool execute = true;
 
-        foreach (string instruction in Puzzle.ParsePartTwo())
+        foreach (string instruction in new Puzzle().ParsePartTwo())
         {
             switch (instruction)
             {

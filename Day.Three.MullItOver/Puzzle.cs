@@ -1,15 +1,14 @@
 using System.Text.RegularExpressions;
+using Shared.Code;
 
 namespace Day.Three.MullItOver;
 
-internal static partial class Puzzle
+internal partial class Puzzle : Puzzle<List<string>>
 {
-    private const string Input = "";
-
-    internal static List<string> ParsePartOne() =>
+    internal List<string> ParsePartOne() =>
         MulExpressionPartOne().Matches(Input).Select(x => x.Value).ToList();
 
-    internal static List<string> ParsePartTwo() =>
+    internal List<string> ParsePartTwo() =>
         MulExpressionPartTwo().Matches(Input).Select(x => x.Value).ToList();
 
     [GeneratedRegex(@"mul\(\d{1,3},\d{1,3}\)")]
@@ -17,4 +16,6 @@ internal static partial class Puzzle
 
     [GeneratedRegex(@"(do\(\)|don't\(\)|mul\(\d{1,3},\d{1,3}\))")]
     private static partial Regex MulExpressionPartTwo();
+
+    public override List<string> Parse() { return []; }
 }
