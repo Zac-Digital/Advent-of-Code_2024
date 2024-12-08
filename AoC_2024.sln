@@ -8,6 +8,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Shared.Code", "Shared.Code\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day.Three.MullItOver", "Day.Three.MullItOver\Day.Three.MullItOver.csproj", "{28FAD7E2-F5D8-4644-B962-A353BF5428DB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Day.Four.CeresSearch", "Day.Four.CeresSearch\Day.Four.CeresSearch.csproj", "{25585FAD-4C08-4127-9058-E5EEA50D7391}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -30,5 +32,9 @@ Global
 		{28FAD7E2-F5D8-4644-B962-A353BF5428DB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{28FAD7E2-F5D8-4644-B962-A353BF5428DB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{28FAD7E2-F5D8-4644-B962-A353BF5428DB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{25585FAD-4C08-4127-9058-E5EEA50D7391}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{25585FAD-4C08-4127-9058-E5EEA50D7391}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{25585FAD-4C08-4127-9058-E5EEA50D7391}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{25585FAD-4C08-4127-9058-E5EEA50D7391}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
