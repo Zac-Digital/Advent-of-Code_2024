@@ -65,11 +65,10 @@ public class PartOne : Compute
                 continue;
             }
 
+            board[row][column] = "X";
+
             row += rowOffset;
             column += columnOffset;
-
-            board[row][column] = direction;
-            board[row - rowOffset][column - columnOffset] = "X";
         }
 
         board[row][column] = "X";
