@@ -12,14 +12,6 @@ public class PartOne : Compute
         (0, -1)  // West
     ];
 
-    private static readonly Dictionary<string, string> NextDirection = new()
-    {
-        { "^", ">" },
-        { ">", "v" },
-        { "v", "<" },
-        { "<", "^" }
-    };
-
     public PartOne() : base("Day 6, Part 1") { }
 
     private static (int, int) GetStartPosition(string[][] board)
@@ -61,7 +53,15 @@ public class PartOne : Compute
 
             if (entity == "#")
             {
-                direction = NextDirection[direction];
+                direction = direction switch
+                {
+                    "^" => ">",
+                    ">" => "v",
+                    "v" => "<",
+                    "<" => "^",
+                    _ => throw new InvalidOperationException()
+                };
+
                 continue;
             }
 
