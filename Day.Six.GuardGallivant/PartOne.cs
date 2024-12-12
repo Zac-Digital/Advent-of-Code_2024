@@ -30,39 +30,41 @@ public class PartOne : Compute
     }
 
     private static bool Exited(string[][] board, int row, int column) =>
-        row < 0 || row >= board.Length - 1 || column < 0 || column >= board[0].Length - 1;
+        row <= 0 || row >= board.Length - 1 || column <= 0 || column >= board[0].Length - 1;
 
     private static int Walk(string[][] board, int rowStart, int columnStart)
     {
         int row = rowStart;
         int column = columnStart;
+
         string direction = "^";
+        (int rowOffset, int columnOffset) = Direction[0];
 
         while (!Exited(board, row, column))
         {
-            (int rowOffset, int columnOffset) = direction switch
-            {
-                "^" => Direction[0],
-                ">" => Direction[1],
-                "v" => Direction[2],
-                "<" => Direction[3],
-                _ => throw new InvalidOperationException()
-            };
-
             string entity = board[row + rowOffset][column + columnOffset];
 
             if (entity == "#")
             {
-                direction = direction switch
+                switch (direction)
                 {
-                    "^" => ">",
-                    ">" => "v",
-                    "v" => "<",
-                    "<" => "^",
-                    _ => throw new InvalidOperationException()
-                };
-
-                continue;
+                    case "^":
+                        direction = ">";
+                        (rowOffset, columnOffset) = Direction[1];
+                        break;
+                    case ">":
+                        direction = "v";
+                        (rowOffset, columnOffset) = Direction[2];
+                        break;
+                    case "v":
+                        direction = "<";
+                        (rowOffset, columnOffset) = Direction[3];
+                        break;
+                    case "<":
+                        direction = "^";
+                        (rowOffset, columnOffset) = Direction[0];
+                        break;
+                }
             }
 
             board[row][column] = "X";
