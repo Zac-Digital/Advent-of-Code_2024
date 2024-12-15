@@ -7,7 +7,7 @@ internal partial class Puzzle : Puzzle<(int[], int[])>
 {
     public override (int[], int[]) Parse()
     {
-        string[] numberPairs = Input.Split(Environment.NewLine);
+        string[] numberPairs = Input.Split('\n');
 
         int[] left = new int[numberPairs.Length];
         int[] right = new int[numberPairs.Length];

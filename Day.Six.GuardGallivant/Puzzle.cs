@@ -6,7 +6,7 @@ internal class Puzzle : Puzzle<string[][]>
 {
     public override string[][] Parse()
     {
-        string[] inputSplit = Input.Split(Environment.NewLine);
+        string[] inputSplit = Input.Split('\n');
         string[][] result = new string[inputSplit.Length][];
 
         for (int i = 0; i < inputSplit.Length; i++)

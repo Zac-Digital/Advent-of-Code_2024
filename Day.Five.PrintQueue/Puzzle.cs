@@ -9,7 +9,7 @@ internal class Puzzle : Puzzle<object?>
 
     public override object? Parse()
     {
-        string[] rulesAndPages = Input.Split(Environment.NewLine);
+        string[] rulesAndPages = Input.Split('\n');
 
         char splitChar = '|';
 

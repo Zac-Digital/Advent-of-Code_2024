@@ -17,7 +17,7 @@ public abstract class Compute
     {
         int result = Run();
 
-        double[] runs = new double[128];
+        double[] runs = new double[4];
 
         for (int i = 0; i < runs.Length; i++)
         {
