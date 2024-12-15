@@ -11,13 +11,13 @@ public abstract class Compute
         _dayPart = dayPart;
     }
 
-    protected abstract int Run();
+    protected abstract long Run();
 
     public void Time()
     {
-        int result = Run();
+        long result = Run();
 
-        double[] runs = new double[4];
+        double[] runs = new double[128];
 
         for (int i = 0; i < runs.Length; i++)
         {

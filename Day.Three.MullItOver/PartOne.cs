@@ -6,7 +6,7 @@ public class PartOne : Compute
 {
     public PartOne() : base("Day 3, Part 1") { }
 
-    protected override int Run() => (from instruction in new Puzzle().ParsePartOne()
+    protected override long Run() => (from instruction in new Puzzle().ParsePartOne()
         select instruction.Split(',')
         into splitComma
         let nLeft = int.Parse(splitComma[0].Split('(')[1])

@@ -21,7 +21,7 @@ public class PartTwo : Compute
         return true;
     }
 
-    protected override int Run()
+    protected override long Run()
     {
         // Sorry.. Felt like doing something horribly cursed :)
         return new Puzzle().Parse()

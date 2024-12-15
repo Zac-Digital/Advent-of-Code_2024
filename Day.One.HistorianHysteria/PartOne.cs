@@ -6,7 +6,7 @@ public class PartOne : Compute
 {
     public PartOne() : base("Day 1, Part 1") { }
 
-    protected override int Run()
+    protected override long Run()
     {
         int result = 0;
         (int[] left, int[] right) = new Puzzle().Parse();

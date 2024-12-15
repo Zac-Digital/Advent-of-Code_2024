@@ -55,7 +55,7 @@ public class PartTwo : Compute
         }
     }
 
-    protected override int Run()
+    protected override long Run()
     {
         int result = 0;
 

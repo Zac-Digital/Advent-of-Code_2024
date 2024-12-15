@@ -25,6 +25,6 @@ public class PartOne : Compute
             .Any(pageOrderingRule => pageIndexes[pageNumber] > pageIndexes[pageOrderingRule[1]]));
     }
 
-    protected override int Run()
+    protected override long Run()
         => _puzzle.PagesPerUpdate.Where(IsValid).Sum(pageNumbers => pageNumbers[pageNumbers.Length / 2]);
 }

@@ -78,7 +78,7 @@ public class PartOne : Compute
         return board.SelectMany(x => x).Count(y => y == "X");
     }
 
-    protected override int Run()
+    protected override long Run()
     {
         string[][] board = new Puzzle().Parse();
 

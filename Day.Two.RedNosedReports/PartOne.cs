@@ -21,7 +21,7 @@ public class PartOne : Compute
         return true;
     }
 
-    protected override int Run()
+    protected override long Run()
     {
         return new Puzzle().Parse().Where(IsOrdered).Count(IsInRange);
     }

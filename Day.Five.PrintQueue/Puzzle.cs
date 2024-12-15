@@ -7,7 +7,7 @@ internal class Puzzle : Puzzle<object?>
     public List<int[]> PageOrderingRules { get; } = [];
     public List<int[]> PagesPerUpdate { get; } = [];
 
-    public override object? Parse()
+    public override string[] Parse()
     {
         string[] rulesAndPages = Input.Split('\n');
 
